@@ -1,0 +1,138 @@
+.navbar {
+    height: 60px;
+    background-color: #fff;
+    box-shadow: rgba(0,0,0,0.3) 0 0 5px 0;
+}
+
+span.stars, span.stars>* {
+    display: inline-block;
+    background: url(http://i.imgur.com/YsyS5y8.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+span.stars>*{
+    max-width:80px;
+    background-position: 0 0;
+}
+
+span.review-count {
+/*    float: right;*/
+    margin-left: 5px;
+    color: #ccc;
+}
+
+p.user-name {
+    clear: both;
+}
+
+@media (min-width: 992px) {
+    .logo-container {
+        height: 50px;
+        width: 100px;
+        margin-left: 100px;
+        margin-top: 10px;
+    }
+    
+    .desktop-cta {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        color: #fff;
+        background-color: #FC830D;
+        border-color: #fc8322;
+    }
+    .desktop-cta:hover {
+        color: #fff;
+        background-color: #FC9922;
+        border-color: #FC9922;
+    }
+    
+    .mobile-cta {
+        display:none;
+    }
+    
+    .listing-container {
+        margin: 20px auto;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        position: relative;
+    }
+
+    .thumbnail {
+        float: left;
+        margin-right: 20px;
+        width: 245px;
+        height: 190px;
+    }
+
+    .price-container {
+        float: right;
+        text-align: right;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    .price {
+        font-size: 3em;
+    }
+}
+
+@media (max-width: 991px){    
+    .logo-container {
+        height: 50px;
+        width: 100px;
+        margin: 10px auto;
+    }
+    
+    .listing-container {
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .mobile-cta {
+        float: right;
+        position: absolute;
+        bottom: -75px;
+        right: 10px;
+        color: #fff;
+        background-color: #FC830D;
+        border-color: #fc8322;
+    }
+    
+    .mobile-cta:hover,.mobile-cta:focus {
+        color: #fff;
+        background-color: #FC9922;
+        border-color: #FC9922;
+    }
+    
+    .desktop-cta {
+        display:none;
+    }
+    
+    .thumbnail{
+        padding: 10px;
+    }
+    
+    .info-container{
+        width: 50%;
+        float: left;
+        margin-top: -20px;
+        margin-bottom: 10px;
+    }
+    
+    .price-container {
+        float: right;
+        text-align: right;
+    }
+    
+    .price {
+        font-size: 2em;
+    }
+    
+    .pager a {
+        height: 50px;
+        width: 100%;
+        font-size: 2em;
+    }
+}
+

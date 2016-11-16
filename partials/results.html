@@ -1,0 +1,56 @@
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">{{results.length}}
+                <small>cars available in your area</small>
+            </h1>
+        </div>
+
+    </div>
+
+    <div class="row listing-container" ng-repeat="result in results" ng-controller="ResultsCtrl" >    
+        <div class="col-md-3 thumbnail">
+            <a href="#">
+                <img src="https://www.snappcar.nl/image.aspx?ii={{result.car.imageId}}&w=250&h=200" class="img-responsive">
+            </a>
+        </div>
+        <div class="col-md-3 info-container">
+            <h3>
+                <a href="#">{{result.vwe.make}} {{result.vwe.model}}</a>
+            </h3>
+            <p class="stars-container">
+                <span class="stars">{{result.car.reviewAvg}}</span><span class="review-count">({{result.car.numberOfReviews}})</span>
+            </p>
+            <br>
+            <p>{{result.user.street}}, {{result.user.city}}</p>            
+            <p>
+                View <a href="#">{{result.user.firstName}}'s profile</a>
+            </p>
+        </div>
+        <div class="col-md-3 price-container">
+            <h3 class="panel-title price">€{{result.priceInformation.price.toFixed(2).replace('.',',')}}</h3>
+            <p><span class="price-month">per day</span></p>
+            <p><a class="btn mobile-cta" href="https://www.snappcar.nl/">View</a></p>
+        </div>
+        <p><a class="btn desktop-cta" href="https://www.snappcar.nl/">View</a></p>
+        
+    </div>
+    
+    <div class="row">
+
+        <ul class="pager">
+            <li class="previous"><a href="">Previous page</a>
+            </li>
+            <li class="next"><a href="">Next page</a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+<!-- /.container -->
+
+<!-- Google Maps API -->
+<!--<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSQSNbfNanesHKP68QYcqDzicb4q5pT5w&callback=initMap"></script>-->
